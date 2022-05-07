@@ -14,8 +14,8 @@ rasa train
 ```shell
 SENIVERSE_KEY=xxx rasa run actions
 ```
-
-`xxx` 是我们可以从 https://www.seniverse.com/ 获取的 API 密钥
+### 注意：对于Windows平台不需要输入 SENIVERSE_KEY 这个环境变量. 在 weather.py 代码里将这个值赋值下就可以。
+`xxx` 是我们可以从 https://www.seniverse.com/ 获取的 API 密钥（私钥）
 
 ## 启动 Rasa 服务器
 
