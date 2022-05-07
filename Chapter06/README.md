@@ -16,15 +16,12 @@ pip install neo4j~=4.1
 rasa train
 ```
 
-##启动Rasa动作服务器
 ### 内置知识库
-```shell
-rasa run actions
-```
+
 
 ### 使用自定义 Neo4j 知识库
 ####启动neo4j服务器
-拉取 docker 镜像：
+拉取 neo4j 镜像：
 ```bash
 docker pull neo4j:4.1
 ```
@@ -36,17 +33,17 @@ docker run --rm --env=NEO4J_AUTH=none --publish=7474:7474 --publish=7687:7687 ne
 
 保持这个neo4j 运行。
 
-#### 将图插入到 neo4j
+### 将图插入到 neo4j
 ```bash
 python ./data_to_neo4j.py
 ```
 
-#### 使用自定义neo4j知识库启动Rasa动作服务器
+### 使用自定义neo4j知识库启动Rasa动作服务器 
 ```bash
 USE_NEO4J=1 rasa run actions
 ```
 
-##启动Rasa服务器和客户端
+### 启动Rasa服务器和客户端
 ```bash
 rasa shell
 ```
