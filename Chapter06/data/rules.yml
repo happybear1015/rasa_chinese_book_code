@@ -4,3 +4,7 @@ rules:
     steps:
       - intent: nlu_fallback
       - action: action_default_fallback
+  - rule: restart convesation
+    steps:
+      - intent: restart_conversation
+      - action: action_restart_conversation
